@@ -185,6 +185,35 @@ Steg 4: Kombiner alle elementene i arrayen til en enkelt string ved å bruke " |
 Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder bokstaven "e".
 
 ******************************************************************************/
+// Remove first item
+const removeFirstItemInArray = (array) => {
+    return array.shift()
+}
+removeFirstItemInArray(items)
+console.log(items);
+
+// Erstatt viskelaer med linjal
+    // easiest method if I know that [2] is viskelær 
+    // items[2] = "Linjal"
+
+   
+    // Better method that checks if Viskelær is in the array and subsequently replaces it with linjal
+items.includes("Viskelær") && (items[items.indexOf("Viskelær")] = "Linjal"); 
+console.log(items);
+
+// replace 2 items
+items.splice(0, 2, "Markeringspenn")
+console.log(items);
+
+// Concatenate all elements into one string
+
+const oneStringItems = items.join("|")
+console.log(oneStringItems);
+
+// calling a function on items.filter that goes through every string and only includes it in the updated variable if it contains the letter "e" this isn't case sensitive so "E" wouldn't get excluded
+const itemsWithoutE = items.filter(string => string.includes("e"))
+console.log(itemsWithoutE);
+
 
 // Skriv koden for oppgave 6 her
 
