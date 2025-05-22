@@ -241,6 +241,23 @@ Eksempel 4: (["En", "To", "Tre"], "To") --> ["En", "Tre"]
 
 ******************************************************************************/
 
+// initializing an array for testing
+const arrayTest = ["string", "Test", "ad", "seven"]
+
+// function to that looks for the string within the array, checks that it's a string and that it
+// finds the index of it, then uses splice to remove it from the array and returns the array back, if it doesn't find the string it returns -1,
+// then it adds str to end the of the array
+function includesRemove(arr, str){
+    const arrIndex = arr.indexOf(str)
+    if (arrIndex !== -1 && typeof str === "string"){
+       arr.splice(arrIndex, 1)
+       return arr
+    } else if (arrIndex === -1){
+        arr.push(str)
+        return arr
+    }
+}
+console.log(includesRemove(arrayTest, "five"))
 // Skriv koden for oppgave 7 her
 
 /******************************************************************************
@@ -268,5 +285,25 @@ Hvis parameteret er en annen datatype:
 Returner "😎Kun primitive verdier😎".
 
 ******************************************************************************/
+
+function justACoolDude(val) {
+    if (typeof val === "string"){
+        return `😎${val}😎`
+    } else if (typeof val === "number") {
+        const numToString = (val * 2).toString()
+        return `😎${numToString}😎`
+    } else if (typeof val === "boolean" && val === true) {
+        return "😎Ja😎"
+    } else if (typeof val === "boolean" && val === false) {
+        return "😎slapp av😎"
+}
+else if (val !=="string" && val !== "number" && val !== "boolean") {
+    return "😎Kun primitive verdier😎"
+}}
+console.log(justACoolDude(23));
+console.log(justACoolDude(true));
+console.log(justACoolDude(false));
+console.log(justACoolDude("String"));
+console.log(justACoolDude(undefined));
 
 // Skriv koden for oppgave 8 her
