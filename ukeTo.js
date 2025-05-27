@@ -297,7 +297,7 @@ function justACoolDude(val) {
     } else if (typeof val === "boolean" && val === false) {
         return "😎slapp av😎"
 }
-else if (val !=="string" && val !== "number" && val !== "boolean") {
+else if (typeof val !=="string" && val !== "number" && val !== "boolean") {
     return "😎Kun primitive verdier😎"
 }}
 console.log(justACoolDude(23));
